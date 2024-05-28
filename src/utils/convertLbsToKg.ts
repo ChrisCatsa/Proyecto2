@@ -1,0 +1,1 @@
+export const convertLbsToKg = (lbs: number): string => (lbs * 0.4539237).toFixed(2); 
