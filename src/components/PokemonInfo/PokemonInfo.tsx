@@ -7,11 +7,13 @@ import { convertLbsToKg } from "../../utils/convertLbsToKg";
 import { convertInchesToCm } from "../../utils/convertinchesToCm";
 import { PokemonSprites } from "../PokemonSprites/PokemonSprites";
 import { TypeIcons } from "../shared/TypeIcon/TypeIcon";
+import { useSearchStore } from "../../store/useSearchStore";
 
 export const PokemonInfo = () => {
     const  {pokemonName} = useParams();
     const { pokemonData } = useGetPokemon(pokemonName);
     const mainType = useMemo(() => pokemonData && getMainPokemonType(pokemonData), [pokemonData]);
+
     
     return (
         <div className="flex flex-row justify-between shadow-lg bg-gray-100 rounded-lg">
